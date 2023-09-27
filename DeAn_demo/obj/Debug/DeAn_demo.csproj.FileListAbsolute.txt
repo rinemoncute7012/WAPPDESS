@@ -77,3 +77,10 @@ C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\obj\Debug\DeAn_demo.csproj.Co
 C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\obj\Debug\DeAn_demo.csproj.CopyComplete
 C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\obj\Debug\DeAn_demo.dll
 C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\obj\Debug\DeAn_demo.pdb
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\EntityFramework.dll
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\EntityFramework.SqlServer.dll
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\EntityFramework.xml
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\EntityFramework.SqlServer.xml
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\MyClass.dll
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\MyClass.pdb
+C:\Users\angna\Documents\GitHub\WAPPDESS\DeAn_demo\bin\MyClass.dll.config
