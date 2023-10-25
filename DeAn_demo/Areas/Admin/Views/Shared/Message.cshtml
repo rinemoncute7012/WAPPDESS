@@ -1,0 +1,7 @@
+﻿@if (TempData.ContainsKey("message"))
+{
+    DeAn_demo.Library.XMessage message = (DeAn_demo.Library.XMessage)TempData["message"];
+    <div class="alert alert-@message.TypeMsg">
+        @message.Msg
+    </div>
+}
