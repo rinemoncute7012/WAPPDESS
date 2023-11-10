@@ -4,12 +4,14 @@
     ViewBag.Title = "Trang chủ nhà cung cấp";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
 @section header{
     <link href="~/Public/css/jquery.dataTables.min.css" rel="stylesheet" />
 }
 
-
+@section footer{
+    <script src="~/Public/js/jquery.dataTables.min.js"></script>
+    <script>let table = new DataTable('#myTable');</script>
+}
 
 <div class="wrapper">
     <!-- Main Sidebar Container -->
@@ -23,7 +25,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-6">
-                            <strong class="text-danger">DANH MỤC NHÀ CUNG CẤP</strong>
+                            <strong class="text-danger">DANH SÁCH NHÀ CUNG CẤP</strong>
                         </div>
                         <div class="col-md-6 text-right">
                             <a href="@Url.Action("Create","Supplier")" class="btn-sm btn-success"><i class="fa fa-plus"> Thêm</i></a>
@@ -32,6 +34,7 @@
                     </div>
                 </div>
                 <div class="card-body">
+                    @*hien thi dong thong bao*@
                     @Html.Partial("Message")
                     <table class="table table-bordered table-striped" id="myTable">
                         <thead>
@@ -59,7 +62,7 @@
                                     <td>@Html.DisplayFor(modelItem => item.Order)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Phone)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                                    <td><img src="~/Public/img/supplier/@item.Image" alt="Img" class="img-fluid"</td>
+                                    <td><img src="~/Public/img/supplier/@item.Image" alt="Img" style="max-width: 100px;" /></td>
                                     <td>
                                         @if (item.Status == 1)
                                         {
@@ -84,7 +87,3 @@
         </section><!-- /.content -->
     </div> <!-- /.content-wrapper -->
 </div><!-- ./wrapper -->
-@section footer{
-    <script src="~/Public/js/jquery.dataTables.min.js"></script>
-    <script>let table = new DataTable('#myTable');</script>
-}
