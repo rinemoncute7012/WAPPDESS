@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<MyClass.Model.Products>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Trang chủ sản phẩm";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 @section header{
@@ -40,7 +40,6 @@
                         <thead>
                             <tr>
                                 <th>@Html.DisplayNameFor(model => model.Id)</th>
-
                                 <th>@Html.DisplayNameFor(model => model.Name)</th>
                                 <th>@Html.DisplayNameFor(model => model.CatID)</th>
                                 <th>@Html.DisplayNameFor(model => model.SupplierID)</th>
@@ -60,7 +59,7 @@
                                     <td>@Html.DisplayFor(modelItem => item.CatID)</td>
 
                                     <td>@Html.DisplayFor(modelItem => item.SupplierID)</td>
-                                    <td><img src="~/Public/img/supplier/@item.Image" alt="Img" style="max-width: 100px;" /></td>
+                                    <td><img src="~/Public/img/product/@item.Image" alt="Img" style="max-width: 100px;" /></td>
                                     <td>@Html.DisplayFor(modelItem => item.Price)</td>
                                     <td>@Html.DisplayFor(modelItem => item.Amount)</td>
 
