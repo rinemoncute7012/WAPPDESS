@@ -8,33 +8,43 @@ using System.Threading.Tasks;
 
 namespace MyClass.Model
 {
-    [Table("Sliders")]
+    [Table("Sliders")] //tên của bảng
     public class Sliders
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        public string Name { get; set; }
-        public string URL { get; set; }
-        public string Image { get; set; }
-        public int Order { get; set; }
-        [Required]
-        public string Position { get; set; }
-        [Required]
-        public string MetaDesc { get; set; }
-        [Required]
-        public string MetaKey { get; set; }
-        [Required]
-        public int CreatedBy { get; set; }
-        [Required]
-        public DateTime CreatedAt { get; set; }
-        [Required]
-        public int UpdateBy { get; set; }
-        [Required]
-        public DateTime UpdateAt { get; set; }
-        [Required]
-        public int Status { get; set; }
 
+        [Required(ErrorMessage = "Tên Slider không được để trống")]
+        [Display(Name = "Tên Slider")]
+        public string Name { get; set; }
+        [Display(Name = "Liên kết")]
+        public string URL { get; set; }
+        [Display(Name = "Hình")]
+        public string Image { get; set; }
+        [Display(Name = "Sắp xếp")]
+        public int? Order { get; set; }
+        [Required(ErrorMessage = "Vị trí không được để trống")]
+        [Display(Name = "Vị trí")]
+        public string Position { get; set; }
+        [Required(ErrorMessage = "Mô tả không được để trống")]
+        [Display(Name = "Mô tả")]
+        public string MetaDesc { get; set; }
+        [Required(ErrorMessage = "Từ khóa không được để trống")]
+        [Display(Name = "Từ khóa")]
+        public string MetaKey { get; set; }
+        [Required(ErrorMessage = "Người tạo không được để trống")]
+        [Display(Name = "Người tạo")]
+        public int CreatedBy { get; set; }
+        [Required(ErrorMessage = "Ngày tạo không được để trống")]
+        [Display(Name = "Ngày tạo")]
+        public DateTime CreatedAt { get; set; }
+        [Display(Name = "Người cập nhật")]
+        public int? UpdateBy { get; set; }
+        [Display(Name = "Thời gian cập nhật")]
+        public DateTime? UpdateAt { get; set; }
+        [Required(ErrorMessage = "Trạng thái không được để trống")]
+        [Display(Name = "Trạng thái")]
+        public int Status { get; set; }
 
     }
 }

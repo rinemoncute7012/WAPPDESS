@@ -15,7 +15,7 @@ namespace DeAn_demo.Areas.Admin.Controllers
 {
     public class ProductController : Controller
     {
-        ProductsDAO productsDAO = new ProductsDAO();
+        ProductDAO productsDAO = new ProductDAO();
         CategoriesDAO categoriesDAO = new CategoriesDAO();
         SuppliersDAO suppliersDAO = new SuppliersDAO();
         // GET: Admin/Products

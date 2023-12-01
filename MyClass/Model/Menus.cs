@@ -8,31 +8,37 @@ using System.Threading.Tasks;
 
 namespace MyClass.Model
 {
-    [Table("Menus")]
     public class Menus
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Tên menu không để trống")]
+        [Display(Name = "Tên Menu")]
         public string Name { get; set; }
-
+        [Display(Name = "Bảng dữ liệu")]
         public int? TableId { get; set; }
+        [Display(Name = "Kiểu Menu")]
         public string TypeMenu { get; set; }
+        [Display(Name = "Vị trí")]
         public string Position { get; set; }
+        [Display(Name = "Liên kết")]
         public string Link { get; set; }
+        [Display(Name = "Cấp cha")]
         public int? ParentId { get; set; }
+        [Display(Name = "Sắp xếp")]
         public int? Order { get; set; }
-        [Required]
-        public DateTime CreatedAt { get; set; }
-        [Required]
+        [Display(Name = "Người tạo")]
+        [Required(ErrorMessage = "Người tạo không để trống")]
         public int CreateBy { get; set; }
-        [Required]
-        public DateTime UpdateAt { get; set; }
-        [Required]
-        public int UpdateBy { get; set; }
-        [Required]
+        [Display(Name = "Người tạo")]
+        [Required(ErrorMessage = "Người tạo không để trống")]
+        public DateTime CreateAt { get; set; }
+        [Display(Name = "Người cập nhật")]
+        public int? UpdateBy { get; set; }
+        [Display(Name = "Người cập nhật")]
+        public DateTime? UpdateAt { get; set; }
+        [Display(Name = "Trạng thái")]
+        [Required(ErrorMessage = "Trạng thái không để trống")]
         public int Status { get; set; }
-
-
     }
 }

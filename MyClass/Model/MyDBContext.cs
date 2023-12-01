@@ -18,7 +18,7 @@ namespace MyClass.Model
         public DbSet<Menus> Menus { get; set; }
         public DbSet<OrderDetails> OrderDetails { get; set; }
         public DbSet<Orders> Orders { get; set; }
-        public DbSet<Posts> Porst { get; set; }
+        public DbSet<Posts> Posts { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Sliders> Sliders { get; set; }
         public DbSet<Suppliers> Suppliers { get; set; }

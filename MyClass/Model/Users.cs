@@ -3,38 +3,56 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MyClass.Model
 {
-    [Table("User")]
+    [Table("Users")] //tên của bảng
     public class Users
     {
         [Key]
         public int Id { get; set; }
+
         [Required]
-        public string Username { get; set; }
+        [Display(Name = "Tên đăng nhập")]
+        public string UserName { get; set; }
         [Required]
+        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
         [Required]
+        [Display(Name = "Họ tên người dùng")]
         public string Fullname { get; set; }
         [Required]
+        [Display(Name = "Thư điện tử")]
         public string Email { get; set; }
         [Required]
+        [Display(Name = "Số điện thoại")]
         public string Phone { get; set; }
-        public string Image { get; set; }
+        [Display(Name = "Hình")]
+        public string Img { get; set; }
         [Required]
+        [Display(Name = "Giới tính")]
         public string Gender { get; set; }
         [Required]
+        [Display(Name = "Quyền truy cập")]
         public string Role { get; set; }
+        [Display(Name = "Địa chỉ")]
         public string Address { get; set; }
+        [Display(Name = "Ngày tạo")]
         public DateTime? CreatedAt { get; set; }
+
+        [Display(Name = "Người tạo")]
         public int? CreatedBy { get; set; }
+
+        [Display(Name = "Ngày cập nhật")]
         public DateTime? UpdateAt { get; set; }
+
+        [Display(Name = "Người cập nhật")]
         public int? UpdateBy { get; set; }
-        public int? Status { get; set; }
+        [Required]
+        [Display(Name = "Trạng thái")]
+        public int Status { get; set; }
 
 
     }

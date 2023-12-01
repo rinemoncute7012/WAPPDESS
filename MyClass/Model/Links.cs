@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 
 namespace MyClass.Model
 {
-    [Table("Links")]
+    [Table("Links")] //tên của bảng
     public class Links
     {
         [Key]
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int ID { get; set; }
+        [Display(Name = "URL")]
         public string Slug { get; set; }
-        [Required]
-        public int TableId { get; set; }
+        [Required(ErrorMessage = "Không được để trống")]
+        [Display(Name = "Bảng liên kết")]
+        public int TableID { get; set; }
+        [Display(Name = "Loại liên kết")]
         public string Type { get; set; }
+
 
     }
 }
