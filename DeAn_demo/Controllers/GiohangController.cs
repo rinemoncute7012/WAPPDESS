@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using DeAn_demo.Library;
 
-namespace WebThucHanh.Controllers
+namespace DeAn_demo.Controllers
 {
     public class GiohangController : Controller
     {

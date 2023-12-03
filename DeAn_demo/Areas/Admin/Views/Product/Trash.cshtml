@@ -61,8 +61,8 @@
                                 <td>@Html.DisplayFor(modelItem => item.Price)</td>
                                 <td>@Html.DisplayFor(modelItem => item.SalePrice)</td>
                                 <td>
-                                    <a href="@Url.Action("Undo","Products", new { id = item.Id })" class="btn-sm btn-info"> <i class="fa fa-undo"></i></a>
-                                    <a href="@Url.Action("Delete","Products", new { id = item.Id })" class="btn-sm btn-danger"> <i class="fa fa-trash"></i></a>
+                                    <a href="@Url.Action("Undo","Product", new { id = item.Id })" class="btn-sm btn-info"> <i class="fa fa-undo"></i></a>
+                                    <a href="@Url.Action("Delete","Product", new { id = item.Id })" class="btn-sm btn-danger"> <i class="fa fa-trash"></i></a>
 
                                 </td>
                             </tr>
